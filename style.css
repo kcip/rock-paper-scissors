@@ -18,6 +18,7 @@ body {
  grid-column: 2 / span 3;
  grid-row: 2;
  background: #EFEEEE;
+ background-color:rgba(246, 246, 246, 1);
  border-radius: 5px;
  /* //display: flex; */
  /* justify-content: center;
