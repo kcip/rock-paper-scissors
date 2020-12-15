@@ -62,7 +62,7 @@ const showWinner = (winner, computerPick, playerPick) => {
  }
 }
 
-function newGame() {
+const newGame = () => {
  scoreBoard.computer = 0;
  scoreBoard.player = 0;
  playerScoreId.innerHTML = scoreBoard.player;
@@ -75,7 +75,7 @@ computerScoreId.innerHTML = scoreBoard.computer;
 
 item.forEach(choice => choice.addEventListener('click', pick));
 
-resetBtn.addEventListener('click', function () {
+resetBtn.addEventListener('click', () => {
  newGame();
 });
 
