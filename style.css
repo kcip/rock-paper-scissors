@@ -1,0 +1,240 @@
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+body {
+ margin: 0;
+ padding: 0;
+ background: #FFF;
+ width: 100vw;
+ height: 100vh;display: grid;
+ grid-template-columns: 200px 1fr 200px 1fr 200px;
+ grid-template-rows: 15% 50% 20% 15%;
+ 
+}
+#container {
+ grid-column: 2 / span 3;
+ grid-row: 2;
+ background: #EFEEEE;
+ border-radius: 5px;
+ /* //display: flex; */
+ /* justify-content: center;
+ flex-direction: column; */
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr;
+
+
+}
+h2 {
+ grid-row: 1;
+ grid-column: 1 / -1;
+ align-self: center;
+ justify-self: center;
+ color: #B9314F;
+ font-size: 50px;
+ font-family: 'Bebas Neue', cursive;
+}
+.rock, .paper, .scissors {
+ height: 300px;
+ width: 300px;
+ background-size: contain;
+ background-repeat: no-repeat;
+ background-position: center;
+ margin: 5px;
+ display: flex;
+ justify-self: center;
+ align-items: flex-end;
+ grid-row: 2;
+ justify-content: center;
+ cursor: pointer;
+
+}
+
+.rock p, .paper p, .scissors p {
+ margin-top: 50px;;
+ font-size: 30px;
+ color: #373737;
+ font-family: 'Bebas Neue', cursive;
+ transform: translate3d(0,50px, 0);
+ 
+}
+#playerOneContainer {
+ grid-column: 1;
+ align-self: center;
+ justify-self: center;
+}
+#playerTwoContainer {
+ grid-column: 3;
+ align-self: center;
+ justify-self: center;
+}
+.rock {
+ background-image: url(images/rockHand1.png);
+ grid-column: 1;
+}
+.paper {
+ background-image: url(images/paperHand1.png);
+ grid-column: 2;
+}
+.scissors {
+ background-image: url(images/scissorsHand1.png);
+ grid-column: 3;
+ background-position: center;
+}
+.direction {
+ grid-column: 3;
+ grid-row: 3;
+}
+
+p.direction  {
+ color: #474747;
+ font-size: 30px;
+ font-family: 'Bebas Neue', cursive;
+ justify-self: center;
+ align-self: center;
+}
+.playerOneScore,
+.playerTwoScore {
+ background:#373737;
+ border: 2px solid #fff;
+ height: 250px;
+ width: 240px;
+ grid-row: 3;
+ margin-top: -28px;
+ justify-self: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ border-radius: 5px;
+ position: relative;
+ box-shadow: 20px 30px 50px rgba(0,0,0,0.4);
+ 
+}
+/* .playerOneScore::before,
+.playerTwoScore::before {
+ position: absolute;
+ left: 2px;
+ top: -10px; 
+ right: 2px;
+ content: '';
+ box-shadow: 20px 30px 50px rgba(0,0,0,0,0.8)
+} */
+
+.playerOneScore {
+ grid-column: 2;
+}
+.playerTwoScore {
+ grid-column: 4;
+}
+.p1score,
+.p2score {
+ font-family: 'Bebas Neue', cursive;
+ color: #fff;
+ font-size: 100px;
+ margin: 0;
+ 
+}
+.score {
+ font-family: 'Bebas Neue', cursive;
+ font-size: 130px;
+ color: #fff;
+ margin: 0;
+}
+.winner {
+ grid-row: 2;
+ grid-column: 1 / -1;
+ text-align: center; 
+}
+
+p {
+ color: #FFF;
+ font-size: 25px;
+ font-family: 'Bebas Neue', cursive;
+}
+.winnerText {
+ color: #B9314F;
+ font-size: 35px;
+ padding: 0 10px;
+}
+#button {
+ font-family: 'Bebas Neue', cursive;
+ grid-column: 3;
+ border: 2px solid #fff;
+ grid-row: 4;
+ width: 150px;
+ height: 80px;
+ border-radius: 50px;
+ background-color: #373737;
+ color: #EFEEEE;
+ font-size: 20PX;
+ box-shadow: 20px 30px 50px rgba(0,0,0,0.4);
+ cursor: pointer;
+ transition: all 300ms ease-in-out;
+ justify-self: center;
+}
+
+#button:hover {
+ transform: scale(.8);
+ box-shadow: 20px 30px 80px rgba(0,0,0,0.6);
+}
+
+#reset {
+ background: none;
+ border: none;
+ cursor: pointer;
+ font-size: 20px;
+ color: #474747;
+ grid-column: 5;
+ grid-row: 4;
+ transition: all 300ms ease-in-out;
+}
+
+#reset:hover {
+ color: #B9314F;
+}
+
+#textWrapper {
+ font-family: 'Bebas Neue', cursive;
+ grid-row: 2;
+ grid-column: 1 / -1;
+ align-self: self-end;
+ text-align: center; 
+ color: #474747;
+ padding: 50px;
+ 
+}
+
+.selection {
+ color: #B9314F;
+ font-size: 30px;
+ font-weight: bold;
+ padding: 2px;
+}
+
+.winningPick {
+ font-weight: bold;
+ animation: scale 500ms ease-in-out 200ms forwards;
+ display: block;
+ opacity: 0;
+}
+
+
+@keyframes scale {
+ 0% {
+     transform: scale(.2);
+     opacity: 0.5;
+ }
+ 50% {
+     transform: scale(1.8); 
+     opacity: 1;
+ }
+ 100% {
+     transform: scale(1); 
+     opacity: 1;
+ }
+}
+
